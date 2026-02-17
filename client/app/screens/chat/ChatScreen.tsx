@@ -7,7 +7,7 @@ import {
   Dimensions,
 } from "react-native";
 
-import { ChatScreenFooter } from "../../components/chat/ChatScreenFooter";
+import { ChatInputBar } from "../../components/chat/ChatInputBar"; //edited here
 import MessageChannel from "../../components/chat/MessageChannel";
 import { useLocation } from "../../contexts/LocationContext";
 import { useSettings } from "../../contexts/SettingsContext";
@@ -111,7 +111,7 @@ const ChatScreen = () => {
             <MessageChannel nearbyUsers={nearbyUsers} messages={messages} />
           </View>
           <View style={styles.footerContainer}>
-            <ChatScreenFooter
+            <ChatInputBar //also edited here
               value={messageContent}
               onChangeText={(text: string) => {
                 setMessageContent(text);
